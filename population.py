@@ -9,9 +9,9 @@
 # Calculation of population
 # Print results
 
-birth_rate = 7
-death_rate = 13
-immigrant_rate = 35
+birth_rate = 1/7
+death_rate = 1/13
+immigrant_rate = 1/35
 current_pop = 307357870
 
 print("Current population:", current_pop)
@@ -20,5 +20,5 @@ print("Current population:", current_pop)
 year_input = input("How many years? ")
 year_int = int(year_input)
 
-future_population = year_int * 365 * 24 * 60 * 60 * (1/birth_rate - 1/death_rate + 1/immigrant_rate) + current_pop
+future_population = year_int * 365 * 24 * 60 * 60 * (birth_rate - death_rate + immigrant_rate) + current_pop
 print("After", year_input, " years, the population is:", future_population)
